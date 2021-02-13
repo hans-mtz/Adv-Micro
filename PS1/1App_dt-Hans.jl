@@ -29,8 +29,8 @@ using CSV
 
 ## Setting directory Hans
 # cd("/Volumes/SSD Hans/Github/TopicsDecisionMaking/ReplicationAK")
-rootdir="/Volumes/SSD Hans/Github/Adv Micro/Adv-Micro"
-dirdata="/Volumes/SSD Hans/Github/Adv Micro/Adv-Micro/Data_all"
+rootdir="/Volumes/SSD Hans/Github/Adv Micro/Adv-Micro/PS1"
+dirdata="/Volumes/SSD Hans/Github/Adv Micro/Adv-Micro/PS1/Data_all"
 
 
 ## Functions

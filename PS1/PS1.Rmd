@@ -36,8 +36,8 @@ I think a way to test this simpler model, we could use the Method of Simulated M
 
 $$
 \begin{aligned}
-P(\text{individual }i \text{ is rational})=& P\left(\mathbbm{1}\left\{0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s)\right\},\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right) \\
-&=\frac{1}{N}\sum \mathbbm{1}\left(0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s\right),\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right)
+P(\text{individual } i \text{ is rational})=& P\left(\mathbbm{1}\left\{ 0\geq (\rho_t-\rho_s)'(c_t-w_t-c_s+w_s) \right\},\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*) \right) \\
+&=\frac{1}{N}\sum \mathbbm{1}\left( 0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s\right),\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*) \right)
 \end{aligned}
 $$
 
