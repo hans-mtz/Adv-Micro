@@ -1,0 +1,48 @@
+---
+title: "Advanced Microeconomics"
+subtite: "Problem Set 1: Revealed preferences"
+author: "Hans Martinez"
+date: "13/02/2021"
+output: 
+  pdf_document:
+  html_document: default
+header-includes: 
+  \usepackage{bbm}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem 1
+
+Proof: Follows from FOC, consistency and cyclical argument analogous to Aguiar and Kashev (2020)(AK2020).
+
+## Problem 2
+
+Summing and rearanging, we get
+
+$$
+d_A^t(v_{t,A}-v_{s,A}) - d_B^t(v_{t,B}-v_{s,B}) \geq \rho_t'(c_t^*-c_s^*) \:\forall\: t,s\in T
+$$
+
+which is the determinsitc test analogous to the stochastic version Appendix E in AK2020.
+
+Testing this deterministic model in a grid for $d_i \in [0.1,1], i=\{A,B\}$ in increments of 0.05, I get a rejection rate of 95.86%. Which is high compared to the stochastic version in AK2020. Code can be found in my [github website](https://github.com/hans-mtz/Adv-Micro).
+
+## Problem 3
+
+I think a way to test this simpler model, we could use the Method of Simulated Moments (MSM). We can define that the probability of individual **i** to be rational under this model, and the two given moments is the following
+
+$$
+\begin{aligned}
+P(\text{individual }i \text{ is rational})=& P\left(\mathbbm{1}\left\{0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s)\right\},\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right) \\
+&=\frac{1}{N}\sum \mathbbm{1}\left(0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s\right),\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right)
+\end{aligned}
+$$
+
+So, we could simulate $\{w_t\}_{s=1}^{S}$ for each individual and estimate the model above.
+
+For S=1000, I tested the model above and could get a 95.3% rejection rate in contrast to the 100% of the deterministic case. The result might seem low, however if we consider the restrictions on rationality this model imposes on individuals this might not seem as unlikely.([code](https://github.com/hans-mtz/Adv-Micro)).
+
+

@@ -1,0 +1,119 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Advanced Microeconomics},
+  pdfauthor={Hans Martinez},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{bbm}
+
+\title{Advanced Microeconomics}
+\author{Hans Martinez}
+\date{13/02/2021}
+
+\begin{document}
+\maketitle
+
+\hypertarget{problem-1}{%
+\subsection{Problem 1}\label{problem-1}}
+
+Proof: Follows from FOC, consistency and cyclical argument analogous to
+Aguiar and Kashev (2020)(AK2020).
+
+\hypertarget{problem-2}{%
+\subsection{Problem 2}\label{problem-2}}
+
+Summing and rearanging, we get
+
+\[
+d_A^t(v_{t,A}-v_{s,A}) - d_B^t(v_{t,B}-v_{s,B}) \geq \rho_t'(c_t^*-c_s^*) \:\forall\: t,s\in T
+\]
+
+which is the determinsitc test analogous to the stochastic version
+Appendix E in AK2020.
+
+Testing this deterministic model in a grid for
+\(d_i \in [0.1,1], i=\{A,B\}\) in increments of 0.05, I get a rejection
+rate of 95.86\%. Which is high compared to the stochastic version in
+AK2020. Code can be found in my
+\href{https://github.com/hans-mtz/Adv-Micro}{github website}.
+
+\hypertarget{problem-3}{%
+\subsection{Problem 3}\label{problem-3}}
+
+I think a way to test this simpler model, we could use the Method of
+Simulated Moments (MSM). We can define that the probability of
+individual \textbf{i} to be rational under this model, and the two given
+moments is the following
+
+\[
+\begin{align*}
+P(\text{individual }i \text{ is rational})=& P\left(\mathbbm{1}\left\{0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s)\right\},\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right) \\
+&=\frac{1}{N}\sum \mathbbm{1}\left(0\geq \left(\rho_t-\rho_s)'(c_t-w_t-c_s+w_s\right),\mathbbm{E}[\rho_tc_t]=\rho_t^*c_t^*)\right)
+\end{align*}
+\]
+
+So, we could simulate \(\{w_t\}_{s=1}^{S}\) for each individual and
+estimate the model above.
+
+For S=1000, I tested the model above and could get a 95.3\% rejection
+rate in contrast to the 100\% of the deterministic case. The result
+might seem low, however if we consider the restrictions on rationality
+this model imposes on individuals this might not seem as
+unlikely.(\href{https://github.com/hans-mtz/Adv-Micro}{code}).
+
+\end{document}
