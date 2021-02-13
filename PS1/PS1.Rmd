@@ -28,7 +28,7 @@ $$
 
 which is the determinsitc test analogous to the stochastic version Appendix E in AK2020.
 
-Testing this deterministic model in a grid for $d_i \in [0.1,1], i=\{A,B\}$ in increments of 0.05, I get a rejection rate of 95.86%. Which is high compared to the stochastic version in AK2020. Code can be found in my [github website](https://github.com/hans-mtz/Adv-Micro).
+Testing this deterministic model in a grid for $d_i \in [0.1,1], i=\{A,B\}$ in increments of 0.05, I get a rejection rate of 95.86%. Which is high compared to the stochastic version in AK2020. Code can be found in my [github website](https://github.com/hans-mtz/Adv-Micro/tree/main/PS1).
 
 ## Problem 3
 
@@ -43,6 +43,6 @@ $$
 
 So, we could simulate $\{w_t\}_{s=1}^{S}$ for each individual and estimate the model above.
 
-For S=1000, I tested the model above and could get a 95.3% rejection rate in contrast to the 100% of the deterministic case. The result might seem low, however if we consider the restrictions on rationality this model imposes on individuals this might not seem as unlikely.([code](https://github.com/hans-mtz/Adv-Micro)).
+For S=1000, I tested the model above and could get a 95.3% rejection rate in contrast to the 100% of the deterministic case. The result might seem low, however if we consider the restrictions on rationality this model imposes on individuals this might not seem as unlikely.([code](https://github.com/hans-mtz/Adv-Micro/tree/main/PS1)).
 
 
