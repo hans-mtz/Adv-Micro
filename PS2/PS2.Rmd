@@ -1,6 +1,6 @@
 ---
 title: "Advanced Microeconomics"
-subtitle: "Problem Set 1: Revealed preferences"
+subtitle: "Problem Set 2: Random Utility Model (RUM)"
 author: "Hans Martinez"
 date: "`r format(Sys.time(),'%d %b %Y')`"
 output:
