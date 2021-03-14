@@ -14,15 +14,14 @@ header-includes:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
 ## Testing stability across attention frames
 
-1. I test the null hypothesis that 1) random utility model (RUM) that is stable across frames describes the dataset under a random CRRA utility and 2) the dataset is described by the logit attention (LA) model that has distribution of preferences that is stable across frames under a CRRA utility. The test statistic and p-values for 100 bootstrap replications are displayed in table 1. The distribution of the test statistic is shown in figure 1.
+1. I test the null hypothesis that 1) random utility model (RUM) that is stable across frames describes the dataset under a random CRRA utility and 2) the dataset is described by the logit attention (LA) model that has a distribution of preferences that is stable across frames under a CRRA utility. The test statistic and p-values for 100 bootstrap replications are displayed in table 1. The distribution of the test statistic is shown in figure 1. We can conclude that we reject the null hypothesis that RUM is stable across frames, but we can not reject that LA with CRRA is stable.
 
 ```{r, echo=FALSE}
 # getwd()
 res<-read.csv("results/results.csv")
-row.names(res) <- c("RUM","LA")
+row.names(res) <- c("LA","RUM")
 knitr::kable(res, caption = "Test statistics")
 ```
 
@@ -57,14 +56,14 @@ knitr::include_graphics(c("figs/dist_RUM.png",
                           "figs/dist_LA.png"))
 ```
 
-a. Using only the high and medium cost treatments, I estimate $\hat v$, where $\hat v = argmin \;||g^L-Gv ||$, with $g^L=(\hat P_{\pi}, m^L)'$ for $L=\{LA, RUM \}$ and high and medium cost treatments ony. Then, the predicted distributions of risk aversion are $G'\hat{g}^L$ with $\hat{g}^L=G \hat v$ and taking only the first six observations for the LA model and the first 10 for the RUM model. This implies that there is perfect attention and that the default alternative is the worst. The predictions are displayed in figure 3.
+a. Using only the high and medium cost treatments, I estimate $\hat v$, where $\hat v = argmin \;||g^L-Gv ||$, with $g^L=(\hat P_{\pi}, m^L)'$ for $L=\{LA, RUM \}$ and high and medium cost treatments only. Then, the predicted distributions of risk aversion are $G'\hat{g}^L$ with $\hat{g}^L=G \hat v$ and taking only the first six observations for the LA model and the first 10 for the RUM model. This implies that there is perfect attention and that the default alternative is the worst. The predictions are displayed in figure 3.
 
 ```{r eval=TRUE, echo=FALSE, fig.cap="Distribution of risk aversion under LA and RUM, using CRRA.", fig.show='hold', out.width="50%"}
 knitr::include_graphics(c("figs/pred_RUM.png",
                           "figs/pred_LA.png"))
 ```
 
-b. Lastly, to compare performance of predictions a natural measure of errors is the square root of the sums of the square of the differences between the data and the predicted values. Table 2 displays the errors for both models. We can appreciate that the LA model does better in predicting the distributions of risk aversion alsom than RUM when using CRRA utility.
+b. Lastly, to compare the performance of predictions a natural measure of errors is the square root of the sums of the square of the differences between the data and the predicted values. Table 2 displays the errors for both models. We can appreciate that the LA model does better than RUM, when using CRRA utility, at predicting the distributions of risk aversion.
 
 ```{r, echo=FALSE}
 # getwd()
