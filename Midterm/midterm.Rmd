@@ -47,7 +47,7 @@ f. \quad l_5 \succ_6 l_1 \succ_6 l_3 \succ_6 l_4 \succ_6 l_2
 \end{aligned}
 $$
 
->It is easy to see that R with $l_5 \succ l_1 \succ l_3 \succ l_4 \succ l_2$ satisfies the **single crossing property** as defined in Apesteguia et al. (2017). In particular, for every pair of lotteries $l_i \succ l_j$ $i \ne j$ $i,j=1,...,5$, then $l_i \succ_s l_j \implies l_i \succ_t l_j$ for every  $t > s$, $s \ne t$, $s,t=1,...,6$, which is the definition of single-crossing property.
+>It is easy to see that with CRRA utility with support [-1,1], R satisfies the **single crossing property** as defined in Apesteguia et al. (2017). In particular, for every pair of lotteries $l_i \succ l_j$ $i \ne j$ $i,j=1,...,5$ and for every  $t > s$, $s \ne t$, $s,t=1,...,6$, whenever $l_i \succ_s l_j$ then $l_i \succ_t l_j$, which is the definition of single-crossing property. Another way to interpret this is that the *single-crossing condition states that the ranking of any pair of alternatives reverses at most once in the ordered collection of preferences with low alternatives opting for the low alternative, and high preferences opting for the high alternative.*
 
 2. The distributions of risk aversion using the CRRA assumption under LA and RUM models are displayed in figure 2. I estimated the distributions by $B'\hat P$ where B is defined as $B=\mathbbm{1}(a \in A)\mathbbm{1}(a \succ_l b, \forall b \in A)$ and $\hat P$ are the realized choice frequencies.
 
@@ -63,7 +63,12 @@ knitr::include_graphics(c("figs/pred_RUM.png",
                           "figs/pred_LA.png"))
 ```
 
-b. Lastly, to compare the performance of predictions a natural measure of errors is the square root of the sums of the square of the differences between the data and the predicted values. Table 2 displays the errors for both models. We can appreciate that the LA model does better than RUM, when using CRRA utility, at predicting the distributions of risk aversion.
+b. Lastly, to compare the performance of predictions a natural measure of errors is the square root of the sums of the square of the differences between the data and the predicted values. In particular, 
+
+$$\varepsilon^L= \sqrt{ \sum_{i=1}^{d_i} (\theta_i- \hat{\theta_i}) } $$
+where $\theta_i$ is the risk distribution recovered from data and the $\hat{\theta_i}$ are the predictive values. Since in the testing procedure we use a similar computation, the euclidean distance seems appropriate.
+
+Table 2 displays the errors for both models. We can appreciate that the LA model does better than RUM, when using CRRA utility, at predicting the distributions of risk aversion.
 
 ```{r, echo=FALSE}
 # getwd()
