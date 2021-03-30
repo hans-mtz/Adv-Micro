@@ -5,6 +5,7 @@
 .rar
 .zip
 .png
+.csv
 *.tar
 *.tar.gz
 PS2/**/cvx/**
