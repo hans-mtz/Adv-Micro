@@ -1,0 +1,32 @@
+---
+title: "Testing market power non-parametrically for multi-product firms"
+short: ""
+journal: "AER" # AER, AEJ, PP, JEL
+month: "`r format(Sys.Date(), '%m')`"
+year: "`r format(Sys.Date(), '%Y')`"
+vol: 1
+issue: 1
+jel:
+  - A10
+  - A11
+keywords:
+  - Market power
+  - Industrial organization
+author:
+  - name: Hans Martinez
+    firstname: Hans
+    surname: Martinez
+    email: hmarti33@uwo.ca
+    affiliation: Western University 
+
+acknowledgements: |
+  Hi!
+abstract: |
+  Using the first-order conditions approach, convex analysis, and stochastic process we model and test non-parametrically the market power in the white appliances industry. Our method allows us to test firms’ market power by imposing minimal assumptions in contrast with current literature. First, we get demand estimates and elasticities following AK(2020). By varying ownership structure in the first-order conditions of the firm’s optimization problem, we can test if prices are optimal for single-brand firms, current market structure, or a single multi-brand monopolist. We apply this novel methodology to the white appliances industry in the US. We find that market power accounts very little for pricing, but it is product differentiation that matters.
+output: rticles::aea_article
+---
+
+# Introduction {-}
+
+This is my super cool paper. I'm awesome.
+

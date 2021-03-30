@@ -1,0 +1,33 @@
+---
+title: "Mapping choice sets from micro to market frictions in macro"
+short: ""
+journal: "AER" # AER, AEJ, PP, JEL
+month: "`r format(Sys.Date(), '%m')`"
+year: "`r format(Sys.Date(), '%Y')`"
+vol: 1
+issue: 1
+jel:
+  - A10
+  - A11
+keywords:
+  - Macro
+  - Micro
+  - Cool new thing I'm doing
+author:
+  - name: Hans Martinez
+    firstname: Hans
+    surname: Martinez
+    email: hmarti33@uwo.ca
+    affiliation: Western University 
+
+acknowledgements: |
+  Hi!
+abstract: |
+  Recent research in applied choice theory has evidenced the relevance of the consideration sets of decision-makers. Yet, until now, there’s been a disconnect between these novel applications and the macro applications. We show how to map choice sets to market frictions by making then minimal necessary assumptions and how to use these novel developments in a macro setting. Using data from the US Bureau of Labor Statistics, we apply these techniques to a job searching problem in which it is costlier for applicants to look for jobs that are farther away from their home/current job location/current field of expertise. In other words, the cost of accessing a bigger consideration set increases with the distance from the current state. 
+output: rticles::aea_article
+---
+
+# Introduction {-}
+
+This is my super cool paper. I'm awesome.
+

@@ -1,0 +1,33 @@
+---
+title: "From new micro to macro: Finding the sweet spot"
+short: ""
+journal: "AER" # AER, AEJ, PP, JEL
+month: "`r format(Sys.Date(), '%m')`"
+year: "`r format(Sys.Date(), '%Y')`"
+vol: 1
+issue: 1
+jel:
+  - A10
+  - A11
+keywords:
+  - Macro
+  - Finance
+  - Cool new thing I'm doing
+author:
+  - name: Hans Martinez
+    firstname: Hans
+    surname: Martinez
+    email: hmarti33@uwo.ca
+    affiliation: Western University 
+
+acknowledgements: |
+  Hi!
+abstract: |
+  Recent developments in applied micro theory (stochastic revealed preferences) can test rationality non-parametrically and allow for full heterogeneity in utility functions. In doing so, however, they have to abandon the hope of recovering the distributions of agents and thus can’t be used in applied macro settings. We show how to recover the agents’ distribution by imposing minimal assumptions. We then apply this method to a simple general equilibrium setting in which agents differ in their risk aversion and have access to a set of assets with different risks and yields. We then test the implications in the data and find that the agent’s heterogeneity accounts significantly for risk premia. 
+output: rticles::aea_article
+---
+
+# Introduction {-}
+
+This is my super cool paper. I'm awesome.
+
