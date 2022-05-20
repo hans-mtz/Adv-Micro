@@ -2,3 +2,6 @@
 *.css linguist-detectable=false
 *.tex linguist-detectable=false
 *.js linguist-detectable=false
+*.bib linguist-detectable=false
+*.pdf linguist-detectable=false
+*.csv linguist-detectable=false
